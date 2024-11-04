@@ -11,7 +11,7 @@ import web.mvc.repository.BankRepository;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
+@Transactional(rollbackOn = BasicException.class)// 원래 checked 예외는 롤백 안 하는데 checked 예외도 롤백하도록 수정
 public class BankServiceImpl implements  BankService{
 
     private final BankRepository bankRepository;

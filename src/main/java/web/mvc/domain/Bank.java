@@ -15,6 +15,6 @@ import org.hibernate.annotations.DynamicUpdate;
 @DynamicUpdate
 public class Bank {
     @Id
-    private String account;
-    private int balance;
+    private String account;//계좌번호
+    private int balance;//잔액
 }
